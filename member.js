@@ -1,12 +1,9 @@
 function skillsmember() {
-    var skills = document.getElementById("skills").value;
-    var skills = skills.split(",");
-    var skills = skills.map(function (item) {
-        return item.trim();
-    });
-    var skills = skills.filter(function (item) {
-        return item != "";
-    });
-    var skills = skills.sort();
-    document.getElementById("skills").value = skills.join(", ");
+    var member = document.getElementById("member").value;
+    var member = parseInt(member);
+    var member = member * 100;
+    var member = member / 100;
+    var member = member.toFixed(2);
+    var member = member + "%";
+    document.getElementById("member").value = member;
 }
